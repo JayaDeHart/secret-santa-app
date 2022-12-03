@@ -1,8 +1,10 @@
-export default function MemberInput({ register, index }) {
+export default function MemberInput({ register, index, uid }) {
   return (
     <div>
-      <label>hi~</label>
-      <input />
+      <label>Name</label>
+      <input {...register(`name-${uid}`)} />
+      <label>Email</label>
+      <input {...register(`email-${uid}`)} />
     </div>
   );
 }

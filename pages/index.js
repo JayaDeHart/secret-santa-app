@@ -22,8 +22,6 @@ export default function Home() {
     setElements([...elements, uuidv4()]);
   }
 
-  console.log(elements);
-
   return (
     <div>
       <h1>Secret Santa Helper</h1>
@@ -33,10 +31,16 @@ export default function Home() {
       <h2>Add Members</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         {elements.map((element, index) => (
-          <MemberInput register={register} index={index} key={element} />
+          <MemberInput
+            register={register}
+            index={index}
+            key={element}
+            uid={element}
+          />
         ))}
+        <button onClick={addMember}>+</button>
+        <button type="submit">Submit</button>
       </form>
-      <button onClick={addMember}>+</button>
     </div>
   );
 }
