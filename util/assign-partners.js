@@ -1,22 +1,3 @@
-export const testMembers = [
-  {
-    name: 'Jaya',
-    email: 'dehartj97@gmail.com',
-  },
-  {
-    name: 'Eva',
-    email: 'eva@gmail.com',
-  },
-  {
-    name: 'Inessa',
-    email: 'inessa@gmail.com',
-  },
-  {
-    name: 'Suji',
-    email: 'suji@gmail.com',
-  },
-];
-
 function shuffle(array) {
   let copy = JSON.parse(JSON.stringify(array));
   for (let i = copy.length - 1; i > 0; i--) {
