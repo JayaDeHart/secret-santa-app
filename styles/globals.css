@@ -24,3 +24,62 @@ a {
     background: black;
   }
 }
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    45deg,
+    #b5244d 0px,
+    #b5244d 120px,
+    #771e17 120px,
+    #771e17 240px
+  );
+}
+
+h1,
+h2,
+h3,
+label,
+button,
+span {
+  color: #e9e9e7;
+}
+
+input,
+button {
+  padding: 0.25rem;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+span,
+input,
+button {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+span {
+  background-color: transparent;
+}
+
+.penis {
+  background-color: rgba(10, 43, 30, 1);
+}
+
+.brain {
+  backdrop-filter: blur(0.25rem);
+  background-blend-mode: overlay;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: rgba(10, 43, 30, 0.8);
+  max-width: 75%;
+}
+
+.x {
+  color: red;
+}
