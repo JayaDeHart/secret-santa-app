@@ -6,18 +6,18 @@ export default async function (req, res) {
   try {
     const transporter = nodemailer.createTransport({
       port: 465,
-      host: 'smtp.gmail.com',
-      service: 'gmail',
+      service: 'Yandex',
       auth: {
-        user: 'jayas.secret.santa.email.bot@gmail.com',
-        pass: 'yzweqvfcgwyddopf',
+        user: 'jayas-secret-santa@yandex.com',
+        pass: 'hafhktyajwkwsoes',
       },
     });
-    members.forEach((member) => {
-      const mailData = generateMailData(member);
+
+    for (let x = 0; x < members.length; x++) {
+      const mailData = generateMailData(members[x]);
       transporter.sendMail(mailData);
-    });
-    res.status(200);
+    }
+    res.status(200).json({ message: 'success' });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -25,7 +25,7 @@ export default async function (req, res) {
 
 function generateMailData(member) {
   return {
-    from: 'jayas.secret.santa.email.bot@gmail.com',
+    from: 'jayas-secret-santa@yandex.com',
     to: member.email,
     subject: `Your Secret Santa`,
     text: `You are buying a present for ${member.santa}`,
