@@ -78,7 +78,11 @@ export default function Home() {
         </form>
         <br></br>
         {members.map((member) => (
-          <AddedMember member={member} removeMember={removeMember} />
+          <AddedMember
+            member={member}
+            removeMember={removeMember}
+            key={member.name}
+          />
         ))}
         <br></br>
         <button

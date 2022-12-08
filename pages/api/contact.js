@@ -1,7 +1,7 @@
 let nodemailer = require('nodemailer');
 const emailTemplate = require('../../util/emailTemplate');
 
-export default async function (req, res) {
+export default async function contact(req, res) {
   const members = req.body;
   try {
     const transporter = nodemailer.createTransport({
