@@ -6,10 +6,10 @@ export default async function contact(req, res) {
   try {
     const transporter = nodemailer.createTransport({
       port: 465,
-      service: 'Yandex',
+      service: '"FastMail"',
       auth: {
-        user: 'jayas-secret-santa@yandex.com',
-        pass: 'hafhktyajwkwsoes',
+        user: 'secretsantastupidthing@fastmail.com',
+        pass: 'm6penblmldfdpj4e',
       },
     });
 
@@ -25,9 +25,11 @@ export default async function contact(req, res) {
 
 function generateMailData(member) {
   return {
-    from: 'jayas-secret-santa@yandex.com',
+    from: 'secretsantastupidthing@fastmail.com',
     to: member.email,
     subject: `Your Secret Santa`,
-    text: `You are buying a present for ${member.santa}`,
+    text: `Hello ${member.name}. You are buying a present for ${member.santa}.
+            If its Jaya, get me something nice.
+            Sent automatically via:https://secret-santa-app-9b3g.vercel.app/`,
   };
 }

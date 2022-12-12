@@ -25,5 +25,6 @@ export default function assignPartners(members) {
   old.map((member, index) => {
     return Object.assign(member, { santa: shifted[index].name });
   });
+  console.log(old);
   return old;
 }
